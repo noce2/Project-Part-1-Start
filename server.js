@@ -5,7 +5,8 @@ const app = express();
 
 /* setting up mount paths for assets */
 app.use('/css', express.static(path.join(__dirname, 'css')));
-app.use('/images_src', express.static(path.join(__dirname, 'images_src')));
+app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/images/images_src', express.static(path.join(__dirname, 'images', 'images_src')));
 
 /* setting up server paths */
 app.get('/', (req, res) => res.sendFile('index.html', {
