@@ -7,6 +7,7 @@ const app = express();
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 app.use('/images/images_src', express.static(path.join(__dirname, 'images', 'images_src')));
+app.use('/js', express.static(path.join(__dirname, 'js')));
 
 /* setting up server paths */
 app.get('/', (req, res) => res.sendFile('index.html', {
